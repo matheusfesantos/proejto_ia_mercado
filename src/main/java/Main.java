@@ -1,7 +1,10 @@
+import ambiente.RenderizarMapa;
 import busca.AEstrela;
 import heuristica.HeuristicaNaoAdmissivel;
 import heuristica.Manhattan;
 import model.Posicao;
+
+import static ambiente.RenderizarMapa.imprimirMapa;
 
 public class Main {
 
@@ -10,8 +13,13 @@ public class Main {
         Posicao inicio = new Posicao(5, 0);
         Posicao objetivo = new Posicao(5, 8);
 
-        System.out.println("=======================================");
+        System.out.println("\n=======================================");
         System.out.println("🛒 CARRINHO DE SUPERMERCADO - A* SEARCH");
+        System.out.println("=======================================\n");
+
+        System.out.println("=======================================");
+        System.out.println(" RENDERIZAÇÃO DO MAPA \n");
+        imprimirMapa();
         System.out.println("=======================================\n");
 
         System.out.println("📍 Posição inicial do carrinho: (5,0)");
