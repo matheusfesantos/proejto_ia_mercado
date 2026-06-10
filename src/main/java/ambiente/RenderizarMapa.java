@@ -13,7 +13,7 @@ public class RenderizarMapa {
         for (int i = 0; i < mapa.length; i++) {
             for (int j = 0; j < mapa[0].length; j++) {
 
-                if (i == 5 && j == 0) {
+                if (i == 1 && j == 0) {
                     System.out.print(" S "); // Start
                 } else if (i == 5 && j == 8) {
                     System.out.print(" G "); // Goal

@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Posicao inicio = new Posicao(5, 0);
+        Posicao inicio = new Posicao(1, 0);
         Posicao objetivo = new Posicao(5, 8);
 
         System.out.println("\n=======================================");
