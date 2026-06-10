@@ -65,9 +65,26 @@ public class AEstrela {
 
                 aberto.add(new No(vizinho, g, h, atual));
             }
+
+            imprimirOpen(aberto);
         }
 
         System.out.println("Sem solução.");
+    }
+
+    private static void imprimirOpen(PriorityQueue<No> aberto) {
+        List<No> ordenado = new ArrayList<>(aberto);
+        ordenado.sort(Comparator.comparingInt(n -> n.f));
+
+        System.out.print("  Open  [");
+        int limite = Math.min(ordenado.size(), 5);
+        for (int i = 0; i < limite; i++) {
+            No n = ordenado.get(i);
+            System.out.print("(" + n.posicao.linha + "," + n.posicao.coluna + ")f=" + n.f);
+            if (i < limite - 1) System.out.print(", ");
+        }
+        if (ordenado.size() > 5) System.out.print(", +" + (ordenado.size() - 5) + " mais");
+        System.out.println("]");
     }
 
     private static void imprimirCaminho(No objetivo, Set<Posicao> fechado) {
